@@ -48,11 +48,28 @@ Example JSON input:
     "lang": "en"
 }
 ```
-`"date"` : Instead of the date, you can specify text, a number, or leave it as the default.
 
-`"lang"` : For example, if you want to get the text translated into your language, you can specify it. If not provided, it will default to the current setting.
+#### Input Parameters:
+- **"date"**: Instead of using a date, you can specify a string of text or a number, or leave it to handle a default case. This input is used to match against predefined Easter eggs in the `easter_eggs.json` file. If a match is found, the corresponding message is returned.
+  
+  - **Text Input**: You can send any text to the library. If it matches an Easter egg defined in `easter_eggs.json`, the corresponding message is returned.
+  
+  - **Number Input**: You can also send numbers. Similar to text, if the number matches an Easter egg in `easter_eggs.json`, the message is returned.
 
-The library will respond with a JSON-encoded message based on the predefined Easter eggs in the `easter_eggs.json` file. If no match is found, a default response or an error message will be returned.
+  - **Default Case**: If the input does not match any defined Easter eggs, a default response or an error message is returned.
+
+- **"lang"**: This optional parameter allows you to request the response in a specific language. If the language is not provided or if the requested language is not available, the library will return the message in the default language.
+
+Example:
+
+```json
+{
+    "text": "hello",
+    "lang": "ru"
+}
+```
+
+This would return the Easter egg response for the text "hello" in Russian, if defined, or the default message if not.
 
 ### Localization
 
@@ -65,6 +82,13 @@ Example structure of `easter_eggs.json`:
     "1980": {
         "en": "Thank you for discovering the first Easter egg in the video game 'Adventure'.",
         "ru": "Спасибо за то, что обнаружили первое пасхальное яйцо в видеоигре 'Adventure'."
+    },
+    "hello": {
+        "en": "Hello there!",
+        "es": "¡Hola!"
+    },
+    "42": {
+        "default": "The answer to life, the universe, and everything."
     }
 }
 ```
