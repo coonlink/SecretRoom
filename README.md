@@ -1,10 +1,11 @@
+
 # SecretRoom
 
 SecretRoom is a PHP library designed to manage Easter eggs based on user inputs such as dates, texts, or numbers. The library allows you to define custom responses for specific inputs and supports localization, making it a versatile tool for PHP-based projects.
 
 ## Requirements
 
-- PHP version 8.3.0 or higher
+- PHP version 7.4.0 or higher
 - Composer
 
 ## Installation
@@ -99,7 +100,7 @@ The library uses a custom autoloader defined in `autoload.php`. This autoloader 
 
 ### Error Handling
 
-The library performs a PHP version check at runtime. If the installed PHP version is lower than 8.3.0, an error message will be displayed, and the script will terminate.
+The library performs a PHP version check at runtime. If the installed PHP version is lower than 7.4.0, an error message will be displayed, and the script will terminate.
 
 For command-line usage, the error message will be output to `STDERR`. In a web context, the message will be displayed with a `500 Internal Server Error` response.
 
