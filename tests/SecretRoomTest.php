@@ -5,27 +5,58 @@ use PHPsecretroom\SecretRoom;
 
 class SecretRoomTest extends TestCase
 {
-    public function testHandleRequestWithValidDate()
-    {
-        // Mock responses and Easter egg data
-        $responses = ['1980' => 'Thank you!'];
-        $secretRoom = new SecretRoom($responses);
+    protected $secretRoom;
 
-        // Simulate a POST request
+    protected function setUp(): void
+    {
+        $responses = [
+            'test' => 'ok',
+            'hello' => 'Hello there!',
+            '42' => 'The answer to life, the universe, and everything.',
+        ];
+
+        $this->secretRoom = new SecretRoom($responses);
+    }
+
+    public function testHandleTextRequest()
+    {
         $_SERVER['REQUEST_METHOD'] = 'POST';
         $_SERVER['CONTENT_TYPE'] = 'application/json';
-        $input = json_encode(['date' => '1980']);
-        file_put_contents('php://input', $input);
+        $input = json_encode(['text' => 'hello']);
 
-        // Capture output
         ob_start();
-        $secretRoom->handleRequest();
+        $this->secretRoom->handleRequest();
         $output = ob_get_clean();
 
-        // Assert that the response is as expected
-        $expectedOutput = json_encode(['status' => 'success', 'message' => 'Thank you!']);
+        $expectedOutput = json_encode(['status' => 'success', 'message' => 'Hello there!']);
         $this->assertEquals($expectedOutput, $output);
     }
 
-    // You can add more tests for other scenarios (e.g., text, number, default request)
+    public function testHandleNumberRequest()
+    {
+        $_SERVER['REQUEST_METHOD'] = 'POST';
+        $_SERVER['CONTENT_TYPE'] = 'application/json';
+        $input = json_encode(['number' => '42']);
+
+        ob_start();
+        $this->secretRoom->handleRequest();
+        $output = ob_get_clean();
+
+        $expectedOutput = json_encode(['status' => 'success', 'message' => 'The answer to life, the universe, and everything.']);
+        $this->assertEquals($expectedOutput, $output);
+    }
+
+    public function testHandleDefaultRequest()
+    {
+        $_SERVER['REQUEST_METHOD'] = 'POST';
+        $_SERVER['CONTENT_TYPE'] = 'application/json';
+        $input = json_encode(['text' => 'unknown']);
+
+        ob_start();
+        $this->secretRoom->handleRequest();
+        $output = ob_get_clean();
+
+        $expectedOutput = json_encode(['status' => 'error', 'message' => 'Invalid request.']);
+        $this->assertEquals($expectedOutput, $output);
+    }
 }
