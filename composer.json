@@ -2,13 +2,20 @@
     "name": "coonlink/secretroom",
     "description": "A PHP library for handling secret Easter eggs based on user inputs.",
     "type": "library",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/coonlink/secretroom"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "PHPsecretroom\\": "src/PHPsecretroom/"
         }
     },
     "require": {
-        "php": ">=7.4.0"
+        "php": ">=7.4.0",
+        "coonlink/secretroom": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^9"
