@@ -12,8 +12,7 @@
         }
     },
     "require": {
-        "php": ">=8.0.0",
-        "coonlink/secretroom": "dev-main"
+        "php": ">=8.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9"
