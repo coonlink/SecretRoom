@@ -13,7 +13,7 @@ SecretRoom is a PHP library designed to manage Easter eggs based on user inputs 
 To install the SecretRoom library via Composer, run the following command:
 
 ```bash
-composer require coonlink/SecretRoom
+composer require coonlink/secretroom
 ```
 
 This will download and install the library and its dependencies in your project.
