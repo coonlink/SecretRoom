@@ -2,6 +2,8 @@
     "name": "coonlink/secretroom",
     "description": "A PHP library for handling secret Easter eggs based on user inputs.",
     "type": "library",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "PHPsecretroom\\": "src/PHPsecretroom/"
