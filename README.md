@@ -5,7 +5,7 @@ SecretRoom is a PHP library designed to manage Easter eggs based on user inputs 
 
 ## Requirements
 
-- PHP version 7.4.0 or higher
+- PHP version 8.0.0 or higher
 - Composer
 
 ## Installation
