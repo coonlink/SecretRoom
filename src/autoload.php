@@ -1,7 +1,7 @@
 <?php
 
 class CustomAutoloader {
-    private $minPHPVersion = '7.4.0';
+    private $minPHPVersion = '8.0.0';
 
     public function __construct() {
         $this->checkPHPVersion();
