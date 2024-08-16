@@ -2,6 +2,8 @@
     "name": "coonlink/secretroom",
     "description": "A PHP library for handling secret Easter eggs based on user inputs.",
     "type": "library",
+    "keywords": ["php", "easter eggs", "localization", "custom responses", "secret"],
+    "homepage": "https://github.com/coonlink/SecretRoom",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
@@ -10,7 +12,7 @@
         }
     },
     "require": {
-        "php": ">=7.4.0"
+        "php": ">=8.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9"
@@ -19,7 +21,9 @@
     "authors": [
         {
             "name": "Alberto Clemente",
-            "email": "admin@coonlink.fun"
+            "email": "admin@coonlink.fun",
+            "homepage": "http://dev.coonlink.fun",
+            "role": "Developer"
         }
     ]
 }
