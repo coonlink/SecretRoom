@@ -2,5 +2,12 @@
     "1980": {
         "en": "Thank you for discovering the first Easter egg in the video game 'Adventure'.",
         "ru": "Спасибо за то, что обнаружили первое пасхальное яйцо в видеоигре 'Adventure'."
+    },
+    "hello": {
+        "en": "Hello there!",
+        "es": "¡Hola!"
+    },
+    "42": {
+        "default": "The answer to life, the universe, and everything."
     }
 }
