@@ -1,5 +1,5 @@
 {
-    "name": "coonlink/secret-room",
+    "name": "coonlink/secretroom",
     "description": "A PHP library for handling secret Easter eggs based on user inputs.",
     "type": "library",
     "autoload": {
