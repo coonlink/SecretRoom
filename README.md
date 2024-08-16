@@ -44,10 +44,12 @@ Example JSON input:
 
 ```json
 {
-    "date": "1980", <!-- Instead of the date, you can specify text, a number, or leave it as the default. -->
-    "lang": "en" <!-- This is optional, but if you prefer to view the content in a specific language, you can set it here. If specified, the language will be indicated. -->
+    "date": "1980",
+    "lang": "en"
 }
 ```
+`"date": "*",` <!-- Instead of the date, you can specify text, a number, or leave it as the default. -->
+`"lang": "*"` <!-- This is optional, but if you prefer to view the content in a specific language, you can set it here. If specified, the language will be indicated. -->
 
 The library will respond with a JSON-encoded message based on the predefined Easter eggs in the `easter_eggs.json` file. If no match is found, a default response or an error message will be returned.
 
