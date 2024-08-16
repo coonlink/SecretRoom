@@ -3,6 +3,8 @@
 
 SecretRoom is a PHP library designed to manage Easter eggs based on user inputs such as dates, texts, or numbers. The library allows you to define custom responses for specific inputs and supports localization, making it a versatile tool for PHP-based projects.
 
+![alt text](https://coonlink.fun/SecretRoom/image.jpg)
+
 ## Requirements
 
 - PHP version 8.0.0 or higher
